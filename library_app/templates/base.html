@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- todo: Bootstrap の最新バージョンを検討して含める -->
+  <!-- todo: Favicon を含める -->
+  <title>統合図書館システムサイト</title>
+  <!-- todo: CKEditor の代わりとなるものを含める -->
+</head>
+
+<body>
+
+<nav>
+
+</nav>
+
+{% from "_form_helpers.html" import render_field %}
+
+<div class="container">
+  {% for message in get_flashed_messages() %}
+  <div>
+    {{ message }}
+  </div>
+  {% endfor %}
+
+  {% block content %}
+
+  {% endblock %}
+</div>
+
+<footer>
+
+</footer>
+</body>
+</html>

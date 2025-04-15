@@ -7,4 +7,14 @@
     <orderEntry type="jdk" jdkName="Python 3.10 (library_app_for_portfolio)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/library_app/templates/books" />
+        <option value="$MODULE_DIR$/library_app/templates/error_pages" />
+        <option value="$MODULE_DIR$/library_app/templates/users" />
+        <option value="$MODULE_DIR$/library_app/templates" />
+      </list>
+    </option>
+  </component>
 </module>
