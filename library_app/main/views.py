@@ -5,7 +5,7 @@ from sqlalchemy import desc
 from library_app import db
 from library_app.books.forms import BookSearchForm
 from library_app.main.image_handler import add_featured_image
-from library_app.models import Book, Notice
+from library_app.models import Book, Notification
 
 from unicodedata import normalize
 
@@ -16,9 +16,9 @@ def index():
     form = BookSearchForm()
 
     page = request.args.get('page', 1, type=int)
-    notice_posts = Notice.query.order_by(desc(Notice.id)).paginate(page=page, per_page=10)
+    notifications = Notification.query.filter_by(to_user_id).order_by(desc(Notification.id)).paginate(page=page, per_page=10)
 
-    return render_template('index.html', notice_posts=notice_posts, form=form)
+    return render_template('index.html', notifications=notifications, form=form)
 
 @main.route('/search', methods=['GET', 'POST'])
 def book_search():
